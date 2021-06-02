@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import {Link} from 'react-router-dom'
 import { Menu, Button, Layout } from 'antd';
 import * as Icon from '@ant-design/icons';
 import './side-nav.css'
@@ -24,14 +25,18 @@ export default class SideNav extends PureComponent {
       userMenu = (
         <SubMenu key={menu.id} title={menu.name} icon={React.createElement(Icon[menu.icon])}>
           {menu.children.map(
-            child => <Menu.Item key={child.id}>{child.name}</Menu.Item>
+            child => (
+              <Menu.Item key={child.id}>
+                <Link to={child.url}>{child.name}</Link>
+              </Menu.Item>
+            )
           )}
         </SubMenu>
       )
     } else {
       userMenu = ( 
         <Menu.Item key={menu.id} icon={React.createElement(Icon[menu.icon])}>
-          {menu.name}
+          <Link to={menu.url}>{menu.name}</Link>
         </Menu.Item>
       )
     }

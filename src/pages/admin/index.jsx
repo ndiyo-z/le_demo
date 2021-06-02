@@ -1,10 +1,13 @@
 import React, { PureComponent } from 'react'
-import { Redirect } from 'react-router-dom'
+import { Redirect, Route, Switch } from 'react-router-dom'
 import { Layout } from 'antd';
 import storage from '../../utils/storageUtils'
 import { USER } from '../../constants'
 import Header from '../../components/header'
 import SideNav from '../../components/side-nav'
+import PlateWeight from '../plate-weight'
+import Sku from '../sku'
+import ShippingPacking from '../shipping-packing'
 import './admin.css'
 
 const { Content } = Layout;
@@ -17,7 +20,13 @@ export default class Admin extends PureComponent {
         <SideNav />
         <Layout>
           <Header />
-          <Content>Content</Content>
+          <Content>
+            <Switch>
+              <Route path='/shipping/packing' component={ShippingPacking} />
+              <Route path='/plateWeight' component={PlateWeight} />
+              <Route path='/sku' component={Sku} />
+            </Switch>
+          </Content>
         </Layout>
       </Layout>
     )
