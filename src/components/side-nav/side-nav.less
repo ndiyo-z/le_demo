@@ -1,0 +1,55 @@
+.side-nav {
+  background-color: #120338;
+  color: #fff;
+  .side-nav-header{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color: #120338;
+    position: relative;
+    img{
+      height: 40px;
+      width: 40px;
+      min-width: 40px;
+      transition: all linear 0.2s;
+    }
+    .side-nav-logo{
+      margin-left: 10px;
+    }
+    .side-nav-logo-collapsed{
+      margin-left: 20px;
+    }
+
+    .side-nav-company {
+      font-size: 30px;
+      font-family: Georgia, serif;
+      transition: all linear 0.2s;
+    }
+    .side-nav-company-collapsed{
+      opacity: 0;
+      transition: all linear 0.2s;
+    }
+
+    .side-nav-top-btn{
+      position: absolute;
+      left: 200px;
+      transition: all linear 0.1s;
+    }
+    .side-nav-top-btn-collapsed{
+      position: absolute;
+      left: 80px;
+      transition: all linear 0.1s;
+    }
+  }
+  .ant-menu-item .ant-menu-item-active {
+    // background-color: #5c0011;
+  }
+  .ant-menu,.ant-menu-item,.ant-menu-submenu{
+    // background-color: #5c0011;
+    // color: #fff;
+  }
+  .ant-menu-submenu-active{
+    // color: #fff;
+  }
+  
+}
