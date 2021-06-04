@@ -1,0 +1,72 @@
+.header {
+  background-color: #780650;
+  height: 60px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .header-bread {
+  margin-left: 60px;
+}
+.header .header-bread .header-bread-item {
+  color: #fff;
+  font-size: 16px;
+}
+.header .header-bread .ant-breadcrumb-separator {
+  color: #fff;
+}
+.header .header-right {
+  display: flex;
+  align-items: center;
+}
+.header .header-right .header-right-weather {
+  margin-right: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.header .header-right .header-right-weather img {
+  display: inline-block;
+  width: 26px;
+  margin-right: 10px;
+}
+.header .header-right .header-right-userInfo {
+  width: 120px;
+  color: #fff;
+  margin-right: 30px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .header-right .header-right-userInfo .anticon.anticon-down {
+  position: relative;
+  top: 3px;
+  left: -8px;
+}
+.header .anticon {
+  color: #fff;
+  font-size: 16px;
+}
+.ant-dropdown-menu.ant-dropdown-menu-root.ant-dropdown-menu-vertical.ant-dropdown-menu-light.header-dropdown-menu {
+  border-radius: 8px;
+}
+.ant-dropdown-menu.ant-dropdown-menu-root.ant-dropdown-menu-vertical.ant-dropdown-menu-light.header-dropdown-menu .ant-dropdown-menu-item {
+  margin: 10px 0;
+}
+.ant-dropdown-menu.ant-dropdown-menu-root.ant-dropdown-menu-vertical.ant-dropdown-menu-light.header-dropdown-menu .ant-dropdown-menu-item span {
+  margin-right: 0;
+}
+@media screen and (max-width: 768px) {
+  .header .header-bread {
+    display: none;
+  }
+  .header .header-right {
+    width: 100%;
+    justify-content: center;
+  }
+  .header .header-right .header-right-weather {
+    display: none;
+  }
+}
