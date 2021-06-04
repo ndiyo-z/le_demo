@@ -12,7 +12,10 @@ module.exports = override(
   addLessLoader({
     lessOptions:{
       javascriptEnabled: true,
-      modifyVars: { '@primary-color': '#120338' },
+      modifyVars: { 
+        '@primary-color': '#780650',
+        '@border-radius-base':'10px',
+      },
     }
   }),
 );

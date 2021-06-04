@@ -8,6 +8,7 @@ import SideNav from '../../components/side-nav'
 import PlateWeight from '../plate-weight'
 import Sku from '../sku'
 import ShippingPacking from '../shipping-packing'
+import MatAttr from '../mat-attr'
 import './admin.css'
 
 const { Content } = Layout;
@@ -20,11 +21,13 @@ export default class Admin extends PureComponent {
         <SideNav />
         <Layout>
           <Header />
-          <Content>
+          <Content className="main-layout-content">
             <Switch>
               <Route path='/shipping/packing' component={ShippingPacking} />
               <Route path='/plateWeight' component={PlateWeight} />
               <Route path='/sku' component={Sku} />
+              <Route path='/matAttrList' component={MatAttr} />
+              <Redirect to='/' />
             </Switch>
           </Content>
         </Layout>

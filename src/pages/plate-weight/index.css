@@ -1,0 +1,7 @@
+.wrapper-card {
+  height: 100%;
+  overflow: auto;
+}
+.wrapper-card .plate-weight-table {
+  height: 400px;
+}
